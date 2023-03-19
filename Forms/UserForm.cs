@@ -17,7 +17,7 @@ namespace BibliotecaPilar.Forms
         private User user;
         readonly DataContext dataContext = new DataContext();
 
-        public UserForm(User? user,User currentUser)
+        public UserForm(User? user, User currentUser)
         {
             InitializeComponent();
 
@@ -33,7 +33,7 @@ namespace BibliotecaPilar.Forms
                 {
                     cmbUserType.SelectedIndex = 0;
                 }
-                else 
+                else
                 {
                     cmbUserType.SelectedIndex = 1;
                 }
@@ -49,7 +49,7 @@ namespace BibliotecaPilar.Forms
                 cmbUserType.SelectedIndex = 1;
 
                 //Caso seja feito o cadastro sem realizar o login no sistema
-                if (currentUser.Id == 0) 
+                if (currentUser.Id == 0)
                 {
                     cmbUserType.Enabled = false;
                 }
@@ -147,7 +147,7 @@ namespace BibliotecaPilar.Forms
             user.Username = txtUsername.Text;
             user.Password = txtPassword.Text;
             user.Name = txtName.Text;
-            user.UserType = (String) cmbUserType.SelectedItem;
+            user.UserType = (String)cmbUserType.SelectedItem;
 
             if (user.Id == 0)
             {

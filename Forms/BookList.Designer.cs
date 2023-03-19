@@ -35,8 +35,8 @@
             btnUpdateBook = new Button();
             btnRegisterBook = new Button();
             grpBooks = new GroupBox();
-            btnWithdrawnBook = new Button();
             btnReturnBook = new Button();
+            btnWithdrawnBook = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvBooks).BeginInit();
             ((System.ComponentModel.ISupportInitialize)bookBindingSource).BeginInit();
             grpBooks.SuspendLayout();
@@ -55,7 +55,7 @@
             dgvBooks.RowTemplate.Height = 25;
             dgvBooks.ScrollBars = ScrollBars.Horizontal;
             dgvBooks.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBooks.Size = new Size(634, 415);
+            dgvBooks.Size = new Size(634, 406);
             dgvBooks.TabIndex = 0;
             // 
             // bookBindingSource
@@ -65,33 +65,39 @@
             // btnDeleteBook
             // 
             btnDeleteBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnDeleteBook.Location = new Point(545, 447);
+            btnDeleteBook.Image = Properties.Resources.trash;
+            btnDeleteBook.Location = new Point(547, 438);
             btnDeleteBook.Name = "btnDeleteBook";
-            btnDeleteBook.Size = new Size(102, 27);
+            btnDeleteBook.Size = new Size(100, 35);
             btnDeleteBook.TabIndex = 6;
             btnDeleteBook.Text = "Excluir";
+            btnDeleteBook.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnDeleteBook.UseVisualStyleBackColor = true;
             btnDeleteBook.Click += BtnDeleteBook_Click;
             // 
             // btnUpdateBook
             // 
             btnUpdateBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdateBook.Location = new Point(437, 447);
+            btnUpdateBook.Image = Properties.Resources.edit;
+            btnUpdateBook.Location = new Point(441, 438);
             btnUpdateBook.Name = "btnUpdateBook";
-            btnUpdateBook.Size = new Size(102, 27);
+            btnUpdateBook.Size = new Size(100, 35);
             btnUpdateBook.TabIndex = 4;
             btnUpdateBook.Text = "Alterar";
+            btnUpdateBook.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUpdateBook.UseVisualStyleBackColor = true;
             btnUpdateBook.Click += BtnUpdateBook_Click;
             // 
             // btnRegisterBook
             // 
             btnRegisterBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRegisterBook.Location = new Point(329, 447);
+            btnRegisterBook.Image = Properties.Resources.plus;
+            btnRegisterBook.Location = new Point(335, 438);
             btnRegisterBook.Name = "btnRegisterBook";
-            btnRegisterBook.Size = new Size(102, 27);
+            btnRegisterBook.Size = new Size(100, 35);
             btnRegisterBook.TabIndex = 5;
             btnRegisterBook.Text = "Incluir";
+            btnRegisterBook.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnRegisterBook.UseVisualStyleBackColor = true;
             btnRegisterBook.Click += BtnRegisterBook_Click;
             // 
@@ -111,27 +117,31 @@
             grpBooks.TabStop = false;
             grpBooks.Text = "Livros";
             // 
-            // btnWithdrawnBook
-            // 
-            btnWithdrawnBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnWithdrawnBook.Location = new Point(13, 447);
-            btnWithdrawnBook.Name = "btnWithdrawnBook";
-            btnWithdrawnBook.Size = new Size(107, 27);
-            btnWithdrawnBook.TabIndex = 7;
-            btnWithdrawnBook.Text = "Retirar Livro";
-            btnWithdrawnBook.UseVisualStyleBackColor = true;
-            btnWithdrawnBook.Click += btnWithdrawnBook_Click;
-            // 
             // btnReturnBook
             // 
             btnReturnBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnReturnBook.Location = new Point(126, 447);
+            btnReturnBook.Image = Properties.Resources.returnBook;
+            btnReturnBook.Location = new Point(13, 438);
             btnReturnBook.Name = "btnReturnBook";
-            btnReturnBook.Size = new Size(107, 27);
+            btnReturnBook.Size = new Size(130, 35);
             btnReturnBook.TabIndex = 8;
             btnReturnBook.Text = "Devolver Livro";
+            btnReturnBook.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnReturnBook.UseVisualStyleBackColor = true;
             btnReturnBook.Click += btnReturnBook_Click;
+            // 
+            // btnWithdrawnBook
+            // 
+            btnWithdrawnBook.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnWithdrawnBook.Image = Properties.Resources.borrowBook;
+            btnWithdrawnBook.Location = new Point(149, 438);
+            btnWithdrawnBook.Name = "btnWithdrawnBook";
+            btnWithdrawnBook.Size = new Size(130, 35);
+            btnWithdrawnBook.TabIndex = 7;
+            btnWithdrawnBook.Text = "Retirar Livro";
+            btnWithdrawnBook.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnWithdrawnBook.UseVisualStyleBackColor = true;
+            btnWithdrawnBook.Click += btnWithdrawnBook_Click;
             // 
             // BookList
             // 

@@ -59,13 +59,13 @@
             dgvUsers.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvUsers.Columns.AddRange(new DataGridViewColumn[] { ID, nameDataGridViewTextBoxColumn, usernameDataGridViewTextBoxColumn, userTypeDataGridViewTextBoxColumn });
             dgvUsers.DataSource = userBindingSource;
-            dgvUsers.Location = new Point(12, 24);
+            dgvUsers.Location = new Point(13, 26);
             dgvUsers.MultiSelect = false;
             dgvUsers.Name = "dgvUsers";
             dgvUsers.RowHeadersVisible = false;
             dgvUsers.RowTemplate.Height = 25;
             dgvUsers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvUsers.Size = new Size(636, 188);
+            dgvUsers.Size = new Size(634, 271);
             dgvUsers.TabIndex = 0;
             dgvUsers.SelectionChanged += DgvUsers_SelectionChanged;
             // 
@@ -108,33 +108,39 @@
             // btnUpdateUser
             // 
             btnUpdateUser.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnUpdateUser.Location = new Point(438, 218);
+            btnUpdateUser.Image = Properties.Resources.edit;
+            btnUpdateUser.Location = new Point(441, 303);
             btnUpdateUser.Name = "btnUpdateUser";
-            btnUpdateUser.Size = new Size(102, 27);
+            btnUpdateUser.Size = new Size(100, 35);
             btnUpdateUser.TabIndex = 1;
             btnUpdateUser.Text = "Alterar";
+            btnUpdateUser.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnUpdateUser.UseVisualStyleBackColor = true;
             btnUpdateUser.Click += BtnUpdateUser_Click;
             // 
             // btnIncluir
             // 
             btnIncluir.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnIncluir.Location = new Point(330, 218);
+            btnIncluir.Image = Properties.Resources.plus;
+            btnIncluir.Location = new Point(335, 303);
             btnIncluir.Name = "btnIncluir";
-            btnIncluir.Size = new Size(102, 27);
+            btnIncluir.Size = new Size(100, 35);
             btnIncluir.TabIndex = 2;
             btnIncluir.Text = "Incluir";
+            btnIncluir.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnIncluir.UseVisualStyleBackColor = true;
             btnIncluir.Click += BtnIncluir_Click;
             // 
             // btnExcluir
             // 
             btnExcluir.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnExcluir.Location = new Point(546, 218);
+            btnExcluir.Image = Properties.Resources.trash;
+            btnExcluir.Location = new Point(547, 303);
             btnExcluir.Name = "btnExcluir";
-            btnExcluir.Size = new Size(102, 27);
+            btnExcluir.Size = new Size(100, 35);
             btnExcluir.TabIndex = 3;
             btnExcluir.Text = "Excluir";
+            btnExcluir.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnExcluir.UseVisualStyleBackColor = true;
             btnExcluir.Click += BtnExcluir_Click;
             // 
@@ -144,13 +150,13 @@
             dgvReserves.AllowUserToDeleteRows = false;
             dgvReserves.BorderStyle = BorderStyle.None;
             dgvReserves.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvReserves.Location = new Point(12, 24);
+            dgvReserves.Location = new Point(13, 26);
             dgvReserves.MultiSelect = false;
             dgvReserves.Name = "dgvReserves";
             dgvReserves.RowHeadersVisible = false;
             dgvReserves.RowTemplate.Height = 25;
             dgvReserves.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvReserves.Size = new Size(636, 150);
+            dgvReserves.Size = new Size(634, 141);
             dgvReserves.TabIndex = 4;
             // 
             // reserveBindingSource
@@ -160,8 +166,9 @@
             // grpReserves
             // 
             grpReserves.Controls.Add(dgvReserves);
-            grpReserves.Location = new Point(12, 269);
+            grpReserves.Location = new Point(12, 369);
             grpReserves.Name = "grpReserves";
+            grpReserves.Padding = new Padding(10, 5, 10, 10);
             grpReserves.Size = new Size(660, 180);
             grpReserves.TabIndex = 5;
             grpReserves.TabStop = false;
@@ -175,7 +182,8 @@
             grpUsers.Controls.Add(btnIncluir);
             grpUsers.Location = new Point(12, 12);
             grpUsers.Name = "grpUsers";
-            grpUsers.Size = new Size(660, 251);
+            grpUsers.Padding = new Padding(10, 5, 10, 10);
+            grpUsers.Size = new Size(660, 351);
             grpUsers.TabIndex = 6;
             grpUsers.TabStop = false;
             grpUsers.Text = "Usuários";
@@ -184,7 +192,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(684, 461);
+            ClientSize = new Size(684, 561);
             Controls.Add(grpUsers);
             Controls.Add(grpReserves);
             Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);

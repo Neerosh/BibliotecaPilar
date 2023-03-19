@@ -80,22 +80,26 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnSave.Image = Properties.Resources.save;
             btnSave.Location = new Point(308, 143);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(122, 29);
+            btnSave.Size = new Size(122, 35);
             btnSave.TabIndex = 4;
-            btnSave.Text = "Salvar";
+            btnSave.Text = " Salvar";
+            btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += BtnSave_Click;
             // 
             // btnClearFields
             // 
             btnClearFields.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClearFields.Image = Properties.Resources.trash;
             btnClearFields.Location = new Point(22, 143);
             btnClearFields.Name = "btnClearFields";
-            btnClearFields.Size = new Size(122, 29);
+            btnClearFields.Size = new Size(148, 35);
             btnClearFields.TabIndex = 5;
             btnClearFields.Text = "Limpar Campos";
+            btnClearFields.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnClearFields.UseVisualStyleBackColor = true;
             btnClearFields.Click += BtnClearFields_Click;
             // 

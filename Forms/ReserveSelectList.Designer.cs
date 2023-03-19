@@ -50,11 +50,13 @@
             // btnSelectReserve
             // 
             btnSelectReserve.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSelectReserve.Location = new Point(531, 526);
+            btnSelectReserve.Image = Properties.Resources.next;
+            btnSelectReserve.Location = new Point(502, 519);
             btnSelectReserve.Name = "btnSelectReserve";
-            btnSelectReserve.Size = new Size(116, 27);
+            btnSelectReserve.Size = new Size(145, 35);
             btnSelectReserve.TabIndex = 12;
             btnSelectReserve.Text = "Efetuar Retirada";
+            btnSelectReserve.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSelectReserve.UseVisualStyleBackColor = true;
             btnSelectReserve.Click += BtnSelectReserve_Click;
             // 
@@ -71,7 +73,7 @@
             dgvReserves.RowTemplate.Height = 25;
             dgvReserves.ScrollBars = ScrollBars.Horizontal;
             dgvReserves.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvReserves.Size = new Size(634, 496);
+            dgvReserves.Size = new Size(634, 489);
             dgvReserves.TabIndex = 2;
             // 
             // ReserveSelectList

@@ -16,6 +16,7 @@ namespace BibliotecaPilar
     public partial class MainScreen : Form
     {
         private readonly User currentUser;
+        private bool logout = false;
 
         public MainScreen(User user)
         {
@@ -38,6 +39,10 @@ namespace BibliotecaPilar
 
         private void MainScreen_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (logout)
+            {
+                return;
+            }
             var confirmation = MessageBox.Show("Deseja mesmo fechar ? ",
                              "Fechar", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
@@ -85,6 +90,15 @@ namespace BibliotecaPilar
         {
             ReserveList reserveList = new ReserveList(currentUser);
             reserveList.ShowDialog();
+        }
+
+        private void MniExit_Click(object sender, EventArgs e)
+        {
+            Login login = new Login();
+            this.Hide();
+            login.ShowDialog();
+            logout = true;
+            this.Close();
         }
     }
 }

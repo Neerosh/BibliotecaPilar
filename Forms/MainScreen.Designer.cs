@@ -40,13 +40,15 @@
             mniReserveList = new ToolStripMenuItem();
             statusStrip = new StatusStrip();
             lblUser = new ToolStripStatusLabel();
+            mniExit = new ToolStripMenuItem();
             Menu.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
             // 
             // Menu
             // 
-            Menu.Items.AddRange(new ToolStripItem[] { mniUsers, mniBooks, reservasToolStripMenuItem });
+            Menu.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Menu.Items.AddRange(new ToolStripItem[] { mniUsers, mniBooks, reservasToolStripMenuItem, mniExit });
             Menu.Location = new Point(0, 0);
             Menu.Name = "Menu";
             Menu.Size = new Size(784, 24);
@@ -57,8 +59,9 @@
             // 
             mniUsers.DropDownItems.AddRange(new ToolStripItem[] { mniUserForm, mniUserList });
             mniUsers.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            mniUsers.Image = Properties.Resources.user;
             mniUsers.Name = "mniUsers";
-            mniUsers.Size = new Size(64, 20);
+            mniUsers.Size = new Size(80, 20);
             mniUsers.Text = "Usuários";
             // 
             // mniUserForm
@@ -79,8 +82,9 @@
             // 
             mniBooks.DropDownItems.AddRange(new ToolStripItem[] { mniBookForm, mniBookList });
             mniBooks.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            mniBooks.Image = Properties.Resources.book;
             mniBooks.Name = "mniBooks";
-            mniBooks.Size = new Size(50, 20);
+            mniBooks.Size = new Size(66, 20);
             mniBooks.Text = "Livros";
             // 
             // mniBookForm
@@ -101,8 +105,9 @@
             // reservasToolStripMenuItem
             // 
             reservasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mniReserveForm, mniReserveList });
+            reservasToolStripMenuItem.Image = Properties.Resources.reserve;
             reservasToolStripMenuItem.Name = "reservasToolStripMenuItem";
-            reservasToolStripMenuItem.Size = new Size(64, 20);
+            reservasToolStripMenuItem.Size = new Size(80, 20);
             reservasToolStripMenuItem.Text = "Reservas";
             // 
             // mniReserveForm
@@ -136,11 +141,22 @@
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(0, 17);
             // 
+            // mniExit
+            // 
+            mniExit.Alignment = ToolStripItemAlignment.Right;
+            mniExit.Image = Properties.Resources.logout;
+            mniExit.Name = "mniExit";
+            mniExit.Size = new Size(54, 20);
+            mniExit.Text = "Sair";
+            mniExit.Click += MniExit_Click;
+            // 
             // MainScreen
             // 
             AutoScaleDimensions = new SizeF(7F, 17F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ActiveCaption;
+            BackgroundImage = Properties.Resources.background;
+            BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(784, 461);
             Controls.Add(statusStrip);
             Controls.Add(Menu);
@@ -173,5 +189,6 @@
         private ToolStripMenuItem reservasToolStripMenuItem;
         private ToolStripMenuItem mniReserveForm;
         private ToolStripMenuItem mniReserveList;
+        private ToolStripMenuItem mniExit;
     }
 }

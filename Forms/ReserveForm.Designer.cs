@@ -78,7 +78,7 @@
             // grpReserves
             // 
             grpReserves.Controls.Add(dgvReserves);
-            grpReserves.Location = new Point(13, 249);
+            grpReserves.Location = new Point(13, 268);
             grpReserves.Name = "grpReserves";
             grpReserves.Padding = new Padding(10, 3, 10, 10);
             grpReserves.Size = new Size(510, 168);
@@ -96,10 +96,10 @@
             grpBooks.Controls.Add(grpReserves);
             grpBooks.Controls.Add(cmbBookStatus);
             grpBooks.Controls.Add(dgvBooks);
-            grpBooks.Location = new Point(12, 12);
+            grpBooks.Location = new Point(12, 5);
             grpBooks.Name = "grpBooks";
             grpBooks.Padding = new Padding(10);
-            grpBooks.Size = new Size(538, 442);
+            grpBooks.Size = new Size(538, 449);
             grpBooks.TabIndex = 2;
             grpBooks.TabStop = false;
             grpBooks.Text = "Livros";
@@ -107,22 +107,26 @@
             // btnShowAll
             // 
             btnShowAll.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnShowAll.Location = new Point(407, 23);
+            btnShowAll.Image = Properties.Resources.list;
+            btnShowAll.Location = new Point(383, 60);
             btnShowAll.Name = "btnShowAll";
-            btnShowAll.Size = new Size(116, 27);
+            btnShowAll.Size = new Size(140, 35);
             btnShowAll.TabIndex = 12;
             btnShowAll.Text = "Mostrar Todos";
+            btnShowAll.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnShowAll.UseVisualStyleBackColor = true;
             btnShowAll.Click += BtnShowAll_Click;
             // 
             // btnSearch
             // 
             btnSearch.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSearch.Location = new Point(407, 56);
+            btnSearch.Image = Properties.Resources.search;
+            btnSearch.Location = new Point(403, 19);
             btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(116, 27);
+            btnSearch.Size = new Size(120, 35);
             btnSearch.TabIndex = 11;
             btnSearch.Text = "Pesquisar";
+            btnSearch.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSearch.UseVisualStyleBackColor = true;
             btnSearch.Click += BtnSearch_Click;
             // 
@@ -130,7 +134,7 @@
             // 
             txtBookAuthor.Location = new Point(70, 25);
             txtBookAuthor.Name = "txtBookAuthor";
-            txtBookAuthor.Size = new Size(331, 25);
+            txtBookAuthor.Size = new Size(327, 25);
             txtBookAuthor.TabIndex = 4;
             // 
             // lblBookAuthor
@@ -145,7 +149,7 @@
             // lblBookStatus
             // 
             lblBookStatus.AutoSize = true;
-            lblBookStatus.Location = new Point(13, 61);
+            lblBookStatus.Location = new Point(13, 64);
             lblBookStatus.Name = "lblBookStatus";
             lblBookStatus.Size = new Size(51, 17);
             lblBookStatus.TabIndex = 2;
@@ -156,7 +160,7 @@
             cmbBookStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbBookStatus.FormattingEnabled = true;
             cmbBookStatus.Items.AddRange(new object[] { "Todos", "Disponível", "Reservado", "Retirado" });
-            cmbBookStatus.Location = new Point(70, 56);
+            cmbBookStatus.Location = new Point(70, 61);
             cmbBookStatus.Name = "cmbBookStatus";
             cmbBookStatus.Size = new Size(127, 25);
             cmbBookStatus.TabIndex = 1;
@@ -170,7 +174,7 @@
             dgvBooks.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvBooks.Columns.AddRange(new DataGridViewColumn[] { idDataGridViewTextBoxColumn1, nameDataGridViewTextBoxColumn, authorDataGridViewTextBoxColumn, statusDataGridViewTextBoxColumn1, synopsisDataGridViewTextBoxColumn });
             dgvBooks.DataSource = bookBindingSource;
-            dgvBooks.Location = new Point(13, 89);
+            dgvBooks.Location = new Point(13, 101);
             dgvBooks.MultiSelect = false;
             dgvBooks.Name = "dgvBooks";
             dgvBooks.ReadOnly = true;
@@ -178,7 +182,7 @@
             dgvBooks.RowTemplate.Height = 25;
             dgvBooks.ScrollBars = ScrollBars.Horizontal;
             dgvBooks.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBooks.Size = new Size(510, 154);
+            dgvBooks.Size = new Size(510, 161);
             dgvBooks.TabIndex = 0;
             dgvBooks.SelectionChanged += DgvBooks_SelectionChanged;
             // 
@@ -286,11 +290,13 @@
             // btnSave
             // 
             btnSave.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            btnSave.Location = new Point(407, 23);
+            btnSave.Image = Properties.Resources.plus;
+            btnSave.Location = new Point(413, 19);
             btnSave.Name = "btnSave";
-            btnSave.Size = new Size(116, 27);
+            btnSave.Size = new Size(110, 35);
             btnSave.TabIndex = 12;
-            btnSave.Text = "Salvar";
+            btnSave.Text = " Salvar";
+            btnSave.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnSave.UseVisualStyleBackColor = true;
             btnSave.Click += BtnSave_Click;
             // 
@@ -317,7 +323,7 @@
             MaximizeBox = false;
             Name = "ReserveForm";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "ReserveForm";
+            Text = "Cadastro de Reservas";
             FormClosing += ReserveForm_FormClosing;
             ((System.ComponentModel.ISupportInitialize)dgvReserves).EndInit();
             grpReserves.ResumeLayout(false);

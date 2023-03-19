@@ -70,7 +70,7 @@
             FormBorderStyle = FormBorderStyle.FixedSingle;
             MaximizeBox = false;
             Name = "ReserveList";
-            Text = "ReserveList";
+            Text = "Minhas Reservas";
             ((System.ComponentModel.ISupportInitialize)dgvReserves).EndInit();
             grpReserves.ResumeLayout(false);
             ResumeLayout(false);

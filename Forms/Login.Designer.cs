@@ -57,11 +57,13 @@
             // btnLogin
             // 
             btnLogin.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLogin.Image = Properties.Resources.openDoor;
             btnLogin.Location = new Point(46, 159);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 30);
+            btnLogin.Size = new Size(100, 35);
             btnLogin.TabIndex = 2;
             btnLogin.Text = "Entrar";
+            btnLogin.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
@@ -80,7 +82,7 @@
             // 
             // tableLayoutPanel1
             // 
-            tableLayoutPanel1.BackColor = SystemColors.GradientActiveCaption;
+            tableLayoutPanel1.BackColor = Color.LightBlue;
             tableLayoutPanel1.BackgroundImageLayout = ImageLayout.Center;
             tableLayoutPanel1.ColumnCount = 3;
             tableLayoutPanel1.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 50F));
@@ -119,6 +121,7 @@
             // lblUsuario
             // 
             lblUsuario.AutoSize = true;
+            lblUsuario.BackColor = Color.Transparent;
             lblUsuario.Font = new Font("Segoe UI Semibold", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             lblUsuario.Location = new Point(46, 39);
             lblUsuario.Name = "lblUsuario";

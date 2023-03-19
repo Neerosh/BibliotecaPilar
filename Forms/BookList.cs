@@ -104,7 +104,7 @@ namespace BibliotecaPilar.Forms
 
             if (book == null)
             {
-                MessageBox.Show("Erro ao carregar o livro selecionado.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Erro ao carregar o livro selecionado.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -140,7 +140,7 @@ namespace BibliotecaPilar.Forms
 
             if (book.Status.Equals("Retirado"))
             {
-                MessageBox.Show("Selecione um livro com o estado Reservado ou Disponível.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Selecione um livro com o estado Reservado ou Disponível.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
 
@@ -216,26 +216,37 @@ namespace BibliotecaPilar.Forms
                 reserve.Status = "Livro Devolvido";
                 reserve.BookReturnedDate = DateTime.Now;
                 int diferenceDays = (reserve.BookReturnedDate - reserve.BookWithdrawnDate).Days;
-                reserve.ReserveTotal = 30;
                 if (diferenceDays > 30)
                 {
+                    double baseFineValue = 50 * 0.1;
+
+                    //Multa Simples
+                    reserve.ReserveTotal = diferenceDays * baseFineValue;
+
+                    /*Multa Acumulativa
+                    double baseFineValue = 50
                     for (int i = 0; i < diferenceDays; i++)
-                    {
-                        reserve.ReserveTotal += (reserve.ReserveTotal * 0.01);
-                    }
+                    {   if (i == 0) {
+                            reserve.ReserveTotal += (baseFineValue * 0.1);
+                            continue;
+                        }
+                        reserve.ReserveTotal += (reserve.ReserveTotal * 0.1);
+                    }*/
                 }
                 dataContext.Reserves.Update(reserve);
                 dataContext.Books.Update(book);
                 dataContext.SaveChanges();
 
                 var brazilianCulture = new CultureInfo("pt-BR");
-                double taxValue = reserve.ReserveTotal - 30;
                 double totalValue = reserve.ReserveTotal;
+                string message = "Livro devolvido com sucesso.";
 
-                MessageBox.Show("Livro retirado com sucesso.\n" +
-                    "Preço Fixo: R$ 30,00 \n" +
-                    "Taxa de Atraso: R$ "+ taxValue.ToString(brazilianCulture) + "\n" +
-                    "Total a Pagar: R$ "+ totalValue.ToString(brazilianCulture), "Devolução do Livro", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (totalValue > 0) 
+                {
+                    message += "\n Taxa de Atraso: R$ " + totalValue.ToString(brazilianCulture);
+                }
+
+                MessageBox.Show(message, "Devolução do Livro", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             catch (Exception ex)
             {
