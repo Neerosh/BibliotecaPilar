@@ -279,7 +279,7 @@
             grpReserve.Controls.Add(txtReserveEndDate);
             grpReserve.Controls.Add(label1);
             grpReserve.Controls.Add(txtReserveStartDate);
-            grpReserve.Location = new Point(12, 494);
+            grpReserve.Location = new Point(12, 477);
             grpReserve.Name = "grpReserve";
             grpReserve.Padding = new Padding(10);
             grpReserve.Size = new Size(538, 64);
@@ -306,9 +306,9 @@
             lblValueReserve.ForeColor = Color.Red;
             lblValueReserve.Location = new Point(12, 457);
             lblValueReserve.Name = "lblValueReserve";
-            lblValueReserve.Size = new Size(387, 34);
+            lblValueReserve.Size = new Size(393, 17);
             lblValueReserve.TabIndex = 9;
-            lblValueReserve.Text = "* O valor inicial da reserva é de R$ 30,00.\r\nÉ incluida uma multa de 0,1% por dia atrasado após a data final.";
+            lblValueReserve.Text = "*Após a data final é incluida uma multa de 0,1% por dia atrasado.";
             // 
             // ReserveForm
             // 

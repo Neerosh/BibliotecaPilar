@@ -38,9 +38,9 @@
             reservasToolStripMenuItem = new ToolStripMenuItem();
             mniReserveForm = new ToolStripMenuItem();
             mniReserveList = new ToolStripMenuItem();
+            mniExit = new ToolStripMenuItem();
             statusStrip = new StatusStrip();
             lblUser = new ToolStripStatusLabel();
-            mniExit = new ToolStripMenuItem();
             Menu.SuspendLayout();
             statusStrip.SuspendLayout();
             SuspendLayout();
@@ -124,6 +124,15 @@
             mniReserveList.Text = "Minhas Reservas";
             mniReserveList.Click += MniReserveList_Click;
             // 
+            // mniExit
+            // 
+            mniExit.Alignment = ToolStripItemAlignment.Right;
+            mniExit.Image = Properties.Resources.logout;
+            mniExit.Name = "mniExit";
+            mniExit.Size = new Size(54, 20);
+            mniExit.Text = "Sair";
+            mniExit.Click += MniExit_Click;
+            // 
             // statusStrip
             // 
             statusStrip.Font = new Font("Segoe UI", 9.5F, FontStyle.Regular, GraphicsUnit.Point);
@@ -140,15 +149,6 @@
             lblUser.Font = new Font("Segoe UI Semibold", 9F, FontStyle.Bold, GraphicsUnit.Point);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(0, 17);
-            // 
-            // mniExit
-            // 
-            mniExit.Alignment = ToolStripItemAlignment.Right;
-            mniExit.Image = Properties.Resources.logout;
-            mniExit.Name = "mniExit";
-            mniExit.Size = new Size(54, 20);
-            mniExit.Text = "Sair";
-            mniExit.Click += MniExit_Click;
             // 
             // MainScreen
             // 
